@@ -58,16 +58,16 @@ public class MyDSL extends JavaConfigurationBuilder {
                    respond();
 
 
-        /** New Format
+//
+//
+//         router.inboundEndpoint("inboundEndpoint1", http(port(8280), context("/sample/request"))).
+//         pipeline("pipeline1", onError("epipe")).
+//         filter(condition(source("routeId", Scope.Transport), pattern("r1"))).
+//         then(process(mymediator()).call("outboundEp1")).
+//         otherwise(call("outboundEp2")).
+//         respond();
 
-         router.inboundEndpoint("inboundEndpoint1", http(port(8280), context("/sample/request"))).
-         pipeline("pipeline1", onError("epipe")).
-         filter(condition(source("routeId", Scope.Transport), pattern("r1"))).
-         then(process(mymediator()).call("outboundEp1")).
-         otherwise(call("outboundEp2")).
-         respond();
 
-         */
 
 
         router.pipeline("ePipe").respond();
